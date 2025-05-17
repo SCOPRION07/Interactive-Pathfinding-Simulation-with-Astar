@@ -1,11 +1,11 @@
 # Interactive-Pathfinding-Simulation-with-A*
-An interactive Java Swing-based simulation that visually demonstrates the Bidirectional A* pathfinding algorithm. Users can set start/end points, draw obstacles, and watch the algorithm find the shortest path in real time across a grid. This project is designed for students, developers, and anyone interested in understanding advanced pathfinding and heuristic search methods.
+An interactive Java Swing-based simulation that visually demonstrates the A* pathfinding algorithm. Users can set start/end points, draw obstacles, and watch the algorithm find the shortest path in real time across a grid. This project is designed for students, developers, and anyone interested in understanding advanced pathfinding and heuristic search methods.
 
 📌**Features**
 
 **Interactive Grid:** 50×50 grid where users can set start/end points and place obstacles using the mouse.
 
-**Real-Time Visualization**: Watch the Bidirectional A* algorithm expand from both start and end points simultaneously.
+**Real-Time Visualization**: Watch the A* algorithm expand from both start and end points simultaneously.
 
 **Color-Coded States:**
 
@@ -40,15 +40,31 @@ The application displays a 50×50 grid. Each cell can be a start, end, obstacle,
 
 **Drag:** Quickly add multiple obstacles.
 
-**Bidirectional A-star Algorithm:**
+**AStar Algorithm**
 
-Two priority queues expand from the start and end nodes.
+Explores the grid from start to end using a priority queue.
 
-Each node tracks G-cost (distance), H-cost (heuristic, Manhattan distance), and F-cost (G + H).
+Calculates cost for each node:
 
-The algorithm expands the lowest-cost nodes in both directions until the search frontiers meet.
+g(n): Distance from start
 
-The shortest path is reconstructed and highlighted.
+h(n): Heuristic to end (e.g., Manhattan distance)
+
+f(n) = g(n) + h(n)
+
+Always expands the node with the lowest f(n).
+
+Finds the shortest path if the heuristic is admissible.
+
+**Bidirectional AStar Algorithm**
+
+Runs two A* searches at the same time: one from the start, one from the end.
+
+Each search expands nodes based on the lowest f(n).
+
+Stops when the two searches meet.
+
+Reconstructs the shortest path by connecting the meeting point.
 
 **Visualization:**
 
