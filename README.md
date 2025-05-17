@@ -1,4 +1,4 @@
-# Interactive-Pathfinding-Simulation-with-Bidirectional-A*
+# Interactive-Pathfinding-Simulation-with-A*
 An interactive Java Swing-based simulation that visually demonstrates the Bidirectional A* pathfinding algorithm. Users can set start/end points, draw obstacles, and watch the algorithm find the shortest path in real time across a grid. This project is designed for students, developers, and anyone interested in understanding advanced pathfinding and heuristic search methods.
 
 📌**Features**
